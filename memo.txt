@@ -1,0 +1,52 @@
+◆◆◆◆
+機械学習環境の整備 on Windows10
+◆◆◆◆
+
+
+http://qiita.com/kekekekenta/items/19972a45025a97330e21
+http://h-sao.com/blog/2017/04/10/how-to-install-tensorflow-gpu-on-windows/
+
+
+anaconda3 : create -n tensorflow python=3.5
+activate tensorflow
+
+- Windows10
+- Visual studio 2015 (カスタムインストール選択　Visual C++ の Common Tools for Visual C++ 2015)
+- CUDA 8.0 
+- cuDNN 5.1 for 8.0
+- Tensorflow
+- conda install 
+  (jupyter, scipy, matplotlib, pandas, sklearn, scikit-image, opencv-python, yaml, HDF5, h5py,,,)
+- keras
+
+
+◆Anacondaにパッケージを追加インストール
+Anacondaへ追加でパッケージをインストールする方法は
+（１）「conda install」コマンドを使うか、
+（2）インストールしたいパッケージのファイル群に同梱されている「setup.py」を使って
+　　「python setup.py install」コマンドを実行するか、
+（3）pipコマンドを使う方法の3通りあります。 
+
+「conda update conda」を実行
+「conda update anaconda」を実行
+「conda install package_name」を実行。package_nameはインストールしたいパッケージの名前に置換のこと。
+　上のコマンドで「パッケージが見つかりません（英語）」と表示されたら、pipコマンドを試す。
+「pip install package_name」を実行
+　それでも「パッケージが見つかりません（英語）」と表示されたら、パッケージのソースコードをダウンロード
+　ダウンロードしたソースコードを解凍（展開）
+　setup.pyの見えるフォルダ（ディレクトリ）へ移動
+「python setup.py install」を実行
+　ここまで全てに失敗したら、特にビルドが必要である場合を除けば
+　単にパッケージがインストールされているPythonのバージョンに合わないという可能性もある。
+
+
+visual studio 2015
+9034460282
+iwjmlajr8888
+
+cuda8.0 installed to: 
+C:\Users\tyone\AppData\Local\Temp\CUDA
+
+
+https://my.visualstudio.com/Downloads?q=visual%20studio%202015&wt.mc_id=o~msft~vscom~older-downloads
+https://developer.nvidia.com/rdp/cudnn-download
